@@ -1,0 +1,51 @@
+/* ===========================================
+  * common
+*/
+* {
+  margin: 0;
+  padding: 0;
+}
+ul,
+li {
+  list-style-type: none;
+}
+/* // common =================================  */
+
+/* ===========================================
+  * style
+*/
+.flex-layout,
+.flex-layout ul {
+  width: 100%;
+  overflow: hidden;
+}
+.flex-layout {
+  padding: 10px 20px 0;
+  box-sizing: border-box;
+}
+.flex-layout ul,
+.flex-layout ul li {
+  display: flex;
+  align-items: center;
+}
+.flex-layout ul {
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  margin: 0 0 0 -5px;
+  width: calc(100% + 10px);
+}
+.flex-layout ul li {
+  justify-content: center;
+  flex-grow: 0;
+  flex-basis: content;
+  font-size: 20px;
+  line-height: 20px;
+  color: #000;
+  background-color: #eee;
+  padding: 10px;
+  margin: 10px 5px 0;
+}
+.flex-layout ul li.flex {
+  flex-grow: 1;
+}
+/* // style ==================================  */
