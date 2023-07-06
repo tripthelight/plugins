@@ -1,0 +1,60 @@
+/* ===========================================
+  * common
+*/
+* {
+  margin: 0;
+  padding: 0;
+}
+ul,
+ol,
+li,
+dl,
+dt,
+dd {
+  list-style-type: none;
+}
+button {
+  background-color: transparent;
+  border-radius: 0;
+  border: 0 none;
+}
+a {
+  text-decoration: none;
+}
+/* // common =================================  */
+
+/* ===========================================
+  * style
+*/
+.scroll-center {
+  width: 100%;
+  width: 300px;
+  padding: 0 20px;
+  box-sizing: border-box;
+  overflow-x: auto;
+  overflow-y: hidden;
+}
+.scroll-center ul {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: max-content;
+}
+.scroll-center ul li + li {
+  margin-left: 8px;
+}
+.scroll-center ul li button {
+  font-size: 20px;
+  line-height: 20px;
+  color: #000;
+  padding: 10px;
+  border: 1px solid #ddd;
+  box-sizing: border-box;
+  cursor: pointer;
+}
+.scroll-center ul li button.active,
+.scroll-center ul li button:active,
+.scroll-center ul li button:hover {
+  background-color: #ddd;
+}
+/* // style ==================================  */
