@@ -1,0 +1,239 @@
+/* ===========================================
+  * common
+*/
+* {
+  margin: 0;
+  padding: 0;
+}
+html,
+body {
+  width: 100%;
+  overflow-x: hidden;
+}
+html {
+  height: 100%;
+  overflow-y: hidden;
+}
+body {
+  height: auto;
+  overflow-y: auto;
+}
+ul,
+ol,
+li,
+dl,
+dt,
+dd {
+  list-style-type: none;
+}
+button {
+  background-color: transparent;
+  border-radius: 0;
+  border: 0 none;
+}
+a {
+  text-decoration: none;
+}
+/* // common =================================  */
+
+/* ===========================================
+  * style
+*/
+/* form */
+.form-block {
+  width: 100%;
+}
+.form-block .item {
+  width: 100%;
+}
+.form-block .item + .item {
+  margin-top: 20px;
+}
+.form-block .item input {
+  box-sizing: border-box;
+}
+/* input */
+.inputBox input.intt {
+  width: 100%;
+  border: 1px solid #e9ecef;
+  padding: 16px 20px;
+  background-color: #f1f3f5;
+  border-radius: 8px;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 24px;
+}
+.inputBox input.intt:focus,
+.inputBox input.intt:hover {
+  border: 1px solid #5770ff;
+}
+.inputBox.err input.intt {
+  border: 1px solid #f76e62;
+}
+.inputBox .imp {
+  display: block;
+  padding-top: 8px;
+  font-size: 14px;
+  line-height: 22px;
+  font-weight: 400;
+  color: #f54e3f;
+}
+
+.tablet .inputBox input.intt,
+.tablet .inputBox textarea.textarea {
+  border-radius: 8px;
+}
+.tablet .inputBox input.intt {
+  font-size: 16px;
+  line-height: 24px;
+  padding: 13px 20px;
+}
+.tablet .inputBox .imp {
+  font-size: 13px;
+  line-height: 20px;
+}
+.tablet .inputBox:has(textarea.textarea) {
+  line-height: 0;
+}
+.tablet .inputBox textarea.textarea {
+  font-size: 16px;
+  line-height: 24px;
+  padding: 20px;
+  min-height: 164px;
+  margin: 0;
+}
+
+.mobile .inputBox input.intt,
+.mobile .inputBox textarea.textarea,
+.mobile .fileBox .inputFile label,
+.mobile .fileBox .fileList .file em {
+  font-size: 16px;
+}
+.mobile .inputBox input.intt,
+.mobile .inputBox textarea.textarea {
+  line-height: 24px;
+}
+.mobile .inputBox input.intt {
+  padding: 10px 20px;
+}
+.mobile .inputBox:has(textarea.textarea) {
+  line-height: 0;
+}
+.mobile .inputBox textarea.textarea {
+  padding: 20px;
+  min-height: 124px;
+}
+
+/*textarea*/
+.inputBox textarea.textarea {
+  width: 100%;
+  min-height: 224px;
+  border: 1px solid #e9ecef;
+  padding: 16px 20px;
+  background-color: #f1f3f5;
+  border-radius: 8px;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 24px;
+  resize: none;
+  outline: none;
+}
+.inputBox textarea.textarea:focus,
+.inputBox textarea.textarea:hover {
+  border: 1px solid #5770ff;
+}
+.inputBox.err textarea.textarea {
+  border: 1px solid #f76e62;
+}
+
+/* delete button */
+.ipt-type-del {
+  position: relative;
+}
+.ipt-type-del input {
+  width: 100%;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  -o-appearance: none;
+  appearance: none;
+}
+.ipt-type-del input + button.del {
+  display: none;
+  cursor: default;
+  position: absolute;
+  top: 0;
+  right: 20px;
+  width: 24px;
+  height: 24px;
+  background-color: #000;
+  border-radius: 100%;
+  /*
+  background-color: transparent;
+  background-image: url("../images/common/ic_btn_del.png");
+  background-position: center center;
+  background-repeat: no-repeat;
+  */
+  cursor: pointer;
+  background-size: 26px 24px;
+}
+.ipt-type-del input + button.del::before,
+.ipt-type-del input + button.del::after {
+  content: "";
+  display: block;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  background-color: #fff;
+}
+.ipt-type-del input + button.del::before {
+  width: 2px;
+  height: 12px;
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+.ipt-type-del input + button.del::after {
+  width: 12px;
+  height: 2px;
+  transform: translate(-50%, -50%) rotate(225deg);
+}
+.ipt-type-del input + button.del .alt-txt {
+  font-size: 0;
+  line-height: 0;
+  width: 1px;
+  height: 1px;
+  opacity: 0;
+  color: transparent;
+}
+.ipt-type-del input:focus + button.del.show {
+  display: block;
+}
+.ipt-type-del input:not(:focus) + button.del.show:active {
+  display: block;
+}
+.pc .ipt-type-del input {
+  width: 100%;
+}
+
+.tablet .ipt-type-del input + button.del {
+  width: 18px;
+  height: 18px;
+  right: 20px;
+}
+.tablet .ipt-type-del input + button.del::before {
+  height: 10px;
+}
+.tablet .ipt-type-del input + button.del::after {
+  width: 10px;
+}
+.mobile .ipt-type-del input + button.del {
+  width: 18px;
+  height: 18px;
+  right: 16px;
+}
+.mobile .ipt-type-del input + button.del::before {
+  height: 8px;
+}
+.mobile .ipt-type-del input + button.del::after {
+  width: 8px;
+}
+/* // style ==================================  */
