@@ -1,0 +1,25 @@
+{
+  "editor.formatOnSave": true,
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+
+  /*
+  * 특정 폴더의 특정 scss만 컴파일
+  * 현재는 file1과 file2만 컴파일
+  "liveSassCompile.settings.excludeList": [
+    "path/subpath/*[!(file1|file2)].scss"
+  ],
+  */
+  /*
+   * 전체 프로젝트에서 일부 scss/sass파일만 수정하면 될 경우
+   */
+  "liveSassCompile.settings.includeItems": [
+    "./scss/style.scss" // 어떤 경로에 있는 .scss파일만 컴파일할 것인지 설정
+  ],
+  "liveSassCompile.settings.formats": [
+    {
+      "format": "expanded",
+      "extensionName": ".css",
+      "savePath": "~/../css/" // 컴파일된 css 파일이 저장될 경로
+    }
+  ]
+}

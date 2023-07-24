@@ -1,0 +1,109 @@
+/* ===========================================
+  * common
+*/
+* {
+  margin: 0;
+  padding: 0;
+}
+html,
+body {
+  width: 100%;
+  overflow-x: hidden;
+}
+html {
+  height: 100%;
+  overflow-y: hidden;
+}
+body {
+  height: auto;
+  overflow-y: auto;
+}
+ul,
+ol,
+li,
+dl,
+dt,
+dd {
+  list-style-type: none;
+}
+button {
+  background-color: transparent;
+  border-radius: 0;
+  border: 0 none;
+}
+a {
+  text-decoration: none;
+}
+/* // common =================================  */
+
+/* ===========================================
+  * style
+*/
+.infiniteRolling {
+  width: 100%;
+  overflow: hidden;
+}
+.infiniteRolling .row {
+  position: relative;
+  display: flex;
+  flex-wrap: nowrap;
+}
+.infiniteRolling .row-inner {
+  display: flex;
+  flex-wrap: nowrap;
+  height: 200px;
+  width: max-content;
+  justify-content: space-between;
+}
+.infiniteRolling .row + .row {
+  margin-top: 24px;
+}
+.infiniteRolling .row img {
+  width: auto;
+  height: 200px;
+}
+.infiniteRolling .row.play .row-inner {
+  animation-duration: 100s;
+  animation-delay: 0;
+  animation-iteration-count: infinite;
+  animation-play-state: running;
+  animation-timing-function: linear;
+}
+.infiniteRolling .row.play .row-inner:nth-child(1) {
+  animation-name: autoMoveSlide1;
+  animation-fill-mode: forwards;
+}
+.infiniteRolling .row.play .row-inner:nth-child(2) {
+  animation-name: autoMoveSlide2;
+  animation-fill-mode: none;
+}
+.infiniteRolling .row.play[data-rollingtype="right-left"] .row-inner {
+  animation-direction: normal;
+}
+.infiniteRolling .row.play[data-rollingtype="left-right"] .row-inner {
+  animation-direction: reverse;
+}
+
+@keyframes autoMoveSlide1 {
+  0% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(-100%);
+  }
+  50.01% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+@keyframes autoMoveSlide2 {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-200%);
+  }
+}
+/* // style ==================================  */
