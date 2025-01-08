@@ -1,0 +1,18 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+textarea {
+  width: 250px;
+  height: 100px;
+  border: 1px solid #ddd;
+  outline: none;
+  resize: none;
+  font-size: 14px;
+}
+
+#byteCount {
+  margin-top: 10px;
+  font-size: 14px;
+}
